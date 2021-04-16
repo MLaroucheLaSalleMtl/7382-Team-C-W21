@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fire
+  - Item
+  - Door
+  - skylandDoor2
+  - Terrain
+  - Minimap
+  - TutorialLady
+  - NPC
+  - WeaponLady
+  - Hi
+  - FoodLady
+  - DoYouWantToFight
+  - DoNotTalkWithMe
+  - WeAreTalking
+  - ScaredBoy
+  - Enemy
+  - Weapon
+  - Lootable
+  - Looted
+  - PlayerDead
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Terrain
+  - Water
+  - UI
+  - Player
+  - Minimap
+  - LocalPlayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
