@@ -50,6 +50,7 @@ public class MMONetworkManager : NetworkManager
     [Header("NPC Teleport")]
     [SerializeField] public GameObject teleportToSkyland;
     [SerializeField] public GameObject teleportToDarkland;
+    [SerializeField] public GameObject playerStartPosition;
 
     [Header("Items")]
     public List<Item> itemPrefabs = new List<Item>();

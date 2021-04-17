@@ -59,6 +59,7 @@ public class Player : Entity
     public int blockValue;
     public CinemachineFreeLook freeLookCamera;
     public static Player localPlayer; // localPlayer singleton because there should only be one local player.
+    private bool _isNew = true;
 
     [Header("States")]
     [SerializeField] private bool isCursorVisible = false;
@@ -108,6 +109,7 @@ public class Player : Entity
     [SerializeField] private GameObject tutorialWindow;
     [SerializeField] private GameObject optionsWindow;
     public GameObject winWindow;
+    [SerializeField] public GameObject keyMapping;
 
     [Header("Inventory")]
     public List<int> inventoryItems;
@@ -443,6 +445,7 @@ public class Player : Entity
         
         minimapWindow.SetActive(true);
         statusBarWindow.SetActive(true);
+        keyMapping.SetActive(true);
     }
     
     // All clients need to know the new player position
@@ -1078,6 +1081,7 @@ public class Player : Entity
         {
             inventory.AddItem(i, inventoryItems[i]);
         }
+
     }
     
     #endregion
@@ -1207,6 +1211,12 @@ public class Player : Entity
 
     private void Update()
     {
+        if (_isNew && isLocalPlayer)
+        {
+            TeleportTo(((MMONetworkManager) NetworkManager.singleton).startingPosition.transform.position);
+            _isNew = false;
+        }
+        
         // If we're not local player (means its another player connected to the server)
         if (!isLocalPlayer)
         {
@@ -1263,7 +1273,7 @@ public class Player : Entity
 
             // Mana Regen
             if (mana < maxMana)
-                mana += 1;
+                mana += 3;
 
             // Reset timer
             _regenerationTimer = 0;
