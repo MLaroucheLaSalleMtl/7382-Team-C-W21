@@ -417,6 +417,7 @@ public class Player : Entity
     {
         Cursor.visible = !isCursorVisible;
         masterBookWindow.SetActive(!masterBookWindow.activeSelf);
+        keyMapping.SetActive(!keyMapping.activeSelf);
     }
 
     // Toggle TutorialBook Window
@@ -424,6 +425,7 @@ public class Player : Entity
     {
         Cursor.visible = !isCursorVisible;
         tutorialWindow.SetActive(!tutorialWindow.activeSelf);
+        keyMapping.SetActive(!keyMapping.activeSelf);
     }
 
     // Set the initial state of the UI
